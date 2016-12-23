@@ -12,8 +12,6 @@ static byte ip[] = { 192, 168, 3, 251 };
 static byte gateway[] = { 192, 168, 3, 1 };
 static byte subnet[] = { 255, 255, 0, 0 };
 static byte server[] = { 192, 168, 3, 101 };
-//IPAddress ip(192, 168, 4, 101);
-//IPAddress server(192, 168, 3, 101);
 
 EthernetClient ethClient;
 PubSubClient client(ethClient);
@@ -94,7 +92,6 @@ void setup()
   //client.setCallback(callback);
 
   Ethernet.begin(mac, ip, gateway, subnet);
-  // Allow the hardware to sort itself out
   delay(1500);
 }
 
